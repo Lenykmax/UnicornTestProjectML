@@ -2,6 +2,7 @@ package selenium;
 
 import java.awt.*;
 
+import org.openqa.selenium.By;
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 import org.testng.annotations.BeforeMethod;
@@ -27,12 +28,10 @@ public class EbayTest extends TestBaseSetup implements IRetryAnalyzer {
 
     @BeforeMethod
     public void beforeMethod() throws AWTException {
-        Robot robot;
         driver=getDriver();
         LoginPage = PageFactory.initElements(driver, LoginPage.class);
         HomePage = PageFactory.initElements(driver, HomePage.class);
         BasketPage = PageFactory.initElements(driver, BasketPage.class);
-
     }
 
     @Test(retryAnalyzer = EbayTest.class)

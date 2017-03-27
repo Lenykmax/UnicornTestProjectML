@@ -1,6 +1,7 @@
 
 package selenium.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -38,6 +39,8 @@ public class BasketPage extends TestBaseSetup{
 
     // This method will take two arguments ( Username nd Password)
     public void finalizeOrder() throws InterruptedException {
+        int a=1;
+        driver.findElement(By.xpath("//div["+ a +"]")).click();
         wait.until(ExpectedConditions.elementToBeClickable(setColor));
         setColor.click();
         wait.until(ExpectedConditions.elementToBeClickable(setModel));
