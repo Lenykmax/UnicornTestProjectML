@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="SELENIUM ONFIRE..." parallel="tests" data-provider-thread-count="2">
+
+    <test name="Ebay_chrome"  parallel="classes" thread-count="1">
+        <parameter name="browserType" value="chrome"/>
+        <classes>
+            <class name="selenium.EbayTest"/>
+        </classes>
+    </test>
+    <test name="Ebay_firefox" parallel="classes" thread-count="1">
+        <parameter name="browserType" value="firefox" />
+        <classes>
+            <class name="selenium.EbayTest"/>
+
+        </classes>
+    </test>
+</suite>
+
