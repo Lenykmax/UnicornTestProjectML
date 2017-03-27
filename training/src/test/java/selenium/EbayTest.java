@@ -48,7 +48,6 @@ public class EbayTest extends TestBaseSetup implements IRetryAnalyzer {
         System.out.println("Choose compatible");
         HomePage.chooseResult();
         BasketPage.finalizeOrder();
-
     }
 
     @Override
