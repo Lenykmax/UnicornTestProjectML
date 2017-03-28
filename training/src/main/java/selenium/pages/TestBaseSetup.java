@@ -35,7 +35,7 @@ public class TestBaseSetup {
     }
 
     private static WebDriver initChromeDriver() {
-        String exePath = "C:\\chromedriver.exe";
+        String exePath = "src/chromedriver.exe";
         System.setProperty("webdriver.chrome.driver", exePath);
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
