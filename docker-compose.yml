@@ -1,35 +1,18 @@
-selhub:  
+seleniumhub:
   image: selenium/hub
   ports:
     - 4444:4444
 
-nodefirefox-debug:  
-  image: selenium/node-firefox-debug
+firefoxnode:
+  image: selenium/node-firefox
   ports:
     - 5900
   links:
-    - selhub:hub
+    - seleniumhub:hub
 
-nodechrome-debug:  
-  image: selenium/node-chrome-debug
+chromenode:
+  image: selenium/node-chrome
   ports:
     - 5900
   links:
-    - selhub:hub
-
-testchrome:
-  image: hub.local.storage/testchrome:LastVersion
-  ports:
-    - 5900
-  links:
-    - selhub:hub
-
-testfirefox:
-  image: hub.local.storage/testfirefox:LastVersion
-  ports:
-    - 5900
-  links:
-    - selhub:hub
-
-
-
+    - seleniumhub:hub
