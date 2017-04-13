@@ -12,6 +12,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.openqa.selenium.support.ui.*;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -22,6 +23,7 @@ public class HomePage extends TestBaseSetup {
     final WebDriver driver;
     final WebDriverWait wait;
     Date date;
+    Select select;
     Actions actions;
     String linkForTesting = "http://www.ebay.com/";
     static SimpleDateFormat dateformat = new SimpleDateFormat("dd.M.yyyy");
@@ -33,6 +35,7 @@ public class HomePage extends TestBaseSetup {
 
     @FindBy(how = How.XPATH, using = "//*[@id='gh-top']")
     public WebElement topMenu;
+
 
     @FindBy(how = How.XPATH, using = "//a[contains(text(),'Sign in')]")
     public WebElement btn_LogIn;
@@ -70,6 +73,7 @@ public class HomePage extends TestBaseSetup {
         this.wait = new WebDriverWait(driver, 15);
         this.date = new Date();
         this.actions = new Actions(driver);
+        this.select= new Select((WebElement) driver);
     }
 
     // This method will check is alert presents

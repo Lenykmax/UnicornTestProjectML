@@ -84,6 +84,7 @@ public class TestBaseSetup {
             driver.switchTo().alert();
             driver.switchTo().alert().accept();
             driver.switchTo().defaultContent();
+
         }
     }
 
